@@ -4,7 +4,7 @@ cask "myguestlist" do
   
     preflight do
         system_command "/usr/bin/git",
-                       args: ["clone", "https://github.com/eharper-wtconf/confapp24", "/tmp/confapp24"],
+                       args: ["clone", "https://github.com/eharper-wtconf/confapp24", "~/confapp24"],
                        print_stdout: true
       end
 
