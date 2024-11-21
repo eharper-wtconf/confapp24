@@ -1,0 +1,34 @@
+cask "myguestlist" do
+    version "1.1.0"
+    sha256 "8d12fb17ab34180a1a3bbd5aeebbd637ecb40133aaf7634e7d40b26a43e81a67"
+  
+    preflight do
+        system_command "/usr/bin/git",
+                       args: ["clone", "https://github.com/eharper-wtconf/confapp24", "/tmp/confapp24"],
+                       print_stdout: true
+      end
+
+    preflight do
+        system_command "/usr/bin/osascript",
+                       args: ["~/confapp24/src-smartapp/", "&"],
+                       print_stdout: true
+      end
+      
+    preflight do
+        system_command "/bin/cp",
+                       args: ["~/confapp24/src-smartapp/com.user.watchapp.plist", "~/Library/LaunchAgents/com.user.watchapp.plist"],
+                       print_stdout: true
+      end
+
+    preflight do
+        system_command "/bin/launchctl",
+                       args: ["~/confapp24/src-smartapp/com.user.watchapp.plist", "load", "~/Library/LaunchAgents/com.user.watchapp.plist"],
+                       print_stdout: true
+      end   
+
+  url "https://github.com/eharper-wtconf/confapp24/releases/download/rel2/myguestlist.zip"
+  name "MyGuestList"
+  desc "WTconference guestlist"
+  homepage "https://github.com/eharper-wtconf/confapp24"
+
+  app "myguestlist.app"
