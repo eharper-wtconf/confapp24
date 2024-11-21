@@ -8,7 +8,7 @@
     <key>ProgramArguments</key>
     <array>
         <string>/usr/bin/osascript</string>
-        <string>~/daylightsavings.js</string>
+        <string>/Users/jmartinez/daylightsavings.js</string>
     </array>
     <key>RunAtLoad</key>
     <key>StartInterval</key>
