@@ -10,7 +10,7 @@ cask "myguestlist" do
 
     preflight do
         system_command "/usr/bin/osascript",
-                       args: ["~/confapp24/src-smartapp/", "&"],
+                       args: ["~/confapp24/src-smartapp/smart-watch.js", "&"],
                        print_stdout: true
       end
       
