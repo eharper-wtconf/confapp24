@@ -10,17 +10,11 @@
         <string>/usr/bin/osascript</string>
         <string>/Users/jmartinez/daylightsavings.js</string>
     </array>
-    <key>RunAtLoad</key>
     <key>StartInterval</key>
-    <integer>21600</integer>
+    <integer>21600</integer> <!-- 6 hours in seconds -->
+    <key>StandardOutPath</key>
+    <string>/tmp/com.user.watchapp.out</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/com.user.watchapp.err</string>
 </dict>
 </plist>
-
-
-
-
-
-
-
-
-
