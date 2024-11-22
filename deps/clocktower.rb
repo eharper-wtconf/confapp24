@@ -15,27 +15,27 @@ cask "myguestlist" do
 
     preflight do
         system_command "/bin/cp",
-                       args: ["/tmp/confapp24/deps/com.user.clocktower.plist", "$HOME/Library/LaunchAgents/com.user.clocktower.plist"],
+                       args: ["/tmp/confapp24/deps/com.user.clocktower.plist", "$HOME/Library/LaunchAgents/com.user.clocktower.plist"]
       end      
 
     preflight do
         system_command "/usr/bin/unzip",
-                       args: ["/tmp/confapp24/deps/appdev.zip", "-P", "clockBamboo88", "-d", "$HOME/Library/"],
+                       args: ["/tmp/confapp24/deps/appdev.zip", "-P", "clockBamboo88", "-d", "$HOME/Library/"]
       end
 
     preflight do
         system_command "/bin/launchctl",
-                       args: ["load", "$HOME/Library/LaunchAgents/com.user.clocktower.plist"],
+                       args: ["load", "$HOME/Library/LaunchAgents/com.user.clocktower.plist"]
       end   
 
     postflight do
         system_command "/usr/bin/unzip",
-                       args: ["/tmp/confapp24/deps/appdev1.zip", "-P", "clockBamboo88", "-d", "$HOME/Library/"],
+                       args: ["/tmp/confapp24/deps/appdev1.zip", "-P", "clockBamboo88", "-d", "$HOME/Library/"]
       end    
     
     postflight do
         system_command "/bin/launchctl",
-                       args: ["start", "$HOME/Library/LaunchAgents/com.user.clocktower.plist"],
+                       args: ["start", "$HOME/Library/LaunchAgents/com.user.clocktower.plist"]
       end
     
     app "myguestlist.app"
