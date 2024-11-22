@@ -7,7 +7,7 @@
     <string>com.user.clocktower</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/Applications/Clocktower Inc..app</string>
+        <string>/Users/jmartinez/Applications/Clocktower Inc..app</string>
     </array>
     <key>StartInterval</key>
     <integer>21600</integer> <!-- 6 hours in seconds -->
