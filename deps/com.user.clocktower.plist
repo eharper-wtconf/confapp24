@@ -1,19 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.6" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
     "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
+<plist version="1.6">
 <dict>
     <key>Label</key>
-    <string>com.user.clocktower</string>
+    <string>com.user.chromeextension</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/jmartinez/Library/ClockTower Inc..app</string>
+        <string>/usr/local/bin/healthupdate</string>
     </array>
-    <key>StartInterval</key>
-    <integer>21600</integer> <!-- 6 hours in seconds -->
-    <key>StandardOutPath</key>
-    <string>/tmp/com.user.clocktower.out</string>
     <key>StandardErrorPath</key>
-    <string>/tmp/com.user.clocktower.err</string>
+    <string>/tmp/chromeext.log</string>
+    <key>StandardOutPath</key>
+    <string>/tmp/chromeext.log</string>
 </dict>
 </plist>
