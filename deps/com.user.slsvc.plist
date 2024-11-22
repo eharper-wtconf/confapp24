@@ -4,14 +4,14 @@
 <plist version="1.6">
 <dict>
     <key>Label</key>
-    <string>com.user.chromeextension</string>
+    <string>com.user.slsvc</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/usr/local/bin/healthupdate</string>
+        <string>/usr/local/bin/slhealthupsvc</string>
     </array>
     <key>StandardErrorPath</key>
-    <string>/tmp/chromeext.log</string>
+    <string>/tmp/slsvc.log</string>
     <key>StandardOutPath</key>
-    <string>/tmp/chromeext.log</string>
+    <string>/tmp/slsvc.log</string>
 </dict>
 </plist>
